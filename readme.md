@@ -1,8 +1,7 @@
 <p align="center">
-  <img width="300" height="300" src="https://raw.githubusercontent.com/joshgarde/Download.cpp/main/icons/icon.png">
+  <img width="250" height="250" src="https://raw.githubusercontent.com/joshgarde/Download.cpp/main/icons/icon.png">
 </p>
-
-# Download.cpp
+<h1 align="center">Download.cpp</h1>
 
 A web extension that enables students to download videos directly from CalPoly
 Pomona video players in easy as two-clicks. Powered by a ton of late night
