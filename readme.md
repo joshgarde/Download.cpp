@@ -52,3 +52,7 @@ Pretty cool, right?
 
 Download.cpp is licensed under the terms of [GNU GPLV3](https://www.gnu.org/licenses/gpl-3.0.en.html).
 For the full terms, see the license.md file.
+
+Logo created by SweetMint - all rights reserved.
+ - https://www.deviantart.com/sweetmint9
+ - https://twitter.com/Sweet_Mintality
