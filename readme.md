@@ -5,7 +5,7 @@
 
 A web extension that enables students to download videos directly from CalPoly
 Pomona video players in easy as two-clicks. Powered by a ton of late night
-reverse engineering work and beer - lots of it.
+reverse engineering work and coffee - lots of it.
 
 ## How to use
 
@@ -37,11 +37,10 @@ services such as [Note Taking Express](https://www.cpp.edu/drc/accommodations-an
 ## How does it work
 
 Download.cpp utilizes mechanisms reverse engineered from Kaltura's video players
-in order to provide download functionality directly in the player itself. All
-downloading is performed locally so data is transferred away from your computer.
-The download itself utilizes functionality that Kaltura themselves built into
-their backend. This extension simply exposes these endpoints in a simple,
-user-friendly way.
+in order to provide download functionality directly in the player itself. The
+download itself utilizes functionality that Kaltura has built into their
+backend with no janky mods required. This extension simply exposes these
+endpoints in a simple, user-friendly way.
 
 As a result, we don't need to pay for servers and you get 100% control of your
 privacy. No need for a privacy policy because we don't collect *any* data.

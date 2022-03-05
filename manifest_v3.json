@@ -16,14 +16,14 @@
         "https://streaming.cpp.edu/media/*"
       ],
       "run_at": "document_idle",
-      "js": ["inject.js"],
+      "js": ["src/inject.js"],
       "all_frames": true
     }
   ],
 
   "web_accessible_resources": [
     {
-      "resources": ["cpp-dl.js"],
+      "resources": ["src/cpp-dl.js"],
       "matches": [
         "https://*.kaltura.com/*",
         "https://streaming.cpp.edu/*"

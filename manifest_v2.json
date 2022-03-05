@@ -16,10 +16,10 @@
         "https://streaming.cpp.edu/media/*"
       ],
       "run_at": "document_idle",
-      "js": ["inject.js"],
+      "js": ["src/inject.js"],
       "all_frames": true
     }
   ],
 
-  "web_accessible_resources": ["cpp-dl.js"]
+  "web_accessible_resources": ["src/cpp-dl.js"]
 }
