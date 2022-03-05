@@ -1,6 +1,6 @@
 {
   "name": "download.cpp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Adds a download button to CalPoly Pomona video players",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
