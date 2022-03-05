@@ -31,7 +31,7 @@ jobs:
       - name: Package for Firefox
         run: |
           mkdir -p dist/firefox
-          cp -r src icons manifest_v3.json license.md dist/firefox
+          cp -r src icons manifest_v2.json license.md dist/firefox
           cd dist/firefox
           mv manifest_v2.json manifest.json
           zip -r ../firefox-build-$(git rev-parse --short HEAD).zip .
