@@ -49,9 +49,9 @@ jobs:
           cd ..
           rm -rf firefox
 
-      - name: Relase
+      - name: Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            dist/$FIREFOX_FILENAME
-            dist/$CHROME_FILENAME
+            dist/${{ env.FIREFOX_FILENAME }}
+            dist/${{ env.CHROME_FILENAME }}
