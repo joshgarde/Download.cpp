@@ -1,0 +1,57 @@
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Install packages
+        run: npm install
+      - name: Lint
+        run: npm run lint
+
+  package:
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install packaging dependencies
+        run: |
+          sudo apt update
+          sudo apt install zip
+
+      - name: Package for Chrome
+        run: |
+          CHROME_FILENAME="chrome-build-$(git rev-parse --short HEAD).zip"
+          echo "CHROME_FILENAME=$CHROME_FILENAME" >> $GITHUB_ENV
+
+          mkdir -p dist/chrome
+          cp -r src icons manifest_v3.json license.md dist/chrome
+          cd dist/chrome
+          mv manifest_v3.json manifest.json
+          zip -r "../$CHROME_FILENAME" .
+          cd ..
+          rm -rf chrome
+      - name: Package for Firefox
+        run: |
+          FIREFOX_FILENAME="firefox-build-$(git rev-parse --short HEAD).zip"
+          echo "FIREFOX_FILENAME=$FIREFOX_FILENAME" >> $GITHUB_ENV
+
+          mkdir -p dist/firefox
+          cp -r src icons manifest_v2.json license.md dist/firefox
+          cd dist/firefox
+          mv manifest_v2.json manifest.json
+          zip -r "../$FIREFOX_FILENAME" .
+          cd ..
+          rm -rf firefox
+
+      - name: Relase
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            dist/$FIREFOX_FILENAME
+            dist/$CHROME_FILENAME
