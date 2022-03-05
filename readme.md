@@ -2,6 +2,9 @@
   <img width="250" height="250" src="https://raw.githubusercontent.com/joshgarde/Download.cpp/main/icons/icon.png">
 </p>
 <h1 align="center">Download.cpp</h1>
+<p align="center">
+  <img src="https://github.com/joshgarde/Download.cpp/actions/workflows/main.yml/badge.svg"
+</p>
 
 A web extension that enables students to download videos directly from CalPoly
 Pomona video players in easy as two-clicks. Powered by a ton of late night
