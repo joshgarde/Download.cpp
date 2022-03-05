@@ -25,7 +25,7 @@ jobs:
           cp -r src icons manifest_v3.json license.md dist/chrome
           cd dist/chrome
           mv manifest_v3.json manifest.json
-          zip -r ../chrome-build-$(git rev-parse --short HEAD).zip
+          zip -r ../chrome-build-$(git rev-parse --short HEAD).zip .
           cd ..
           rm -rf chrome
       - name: Package for Firefox
@@ -34,7 +34,7 @@ jobs:
           cp -r src icons manifest_v3.json license.md dist/firefox
           cd dist/firefox
           mv manifest_v2.json manifest.json
-          zip -r ../firefox-build-$(git rev-parse --short HEAD).zip
+          zip -r ../firefox-build-$(git rev-parse --short HEAD).zip .
           cd ..
           rm -rf firefox
 
