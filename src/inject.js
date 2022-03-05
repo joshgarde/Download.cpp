@@ -1,8 +1,8 @@
 'use strict';
 
 (function() {
-  if (!browser && chrome) {
-    window.browser = chrome;
+  if (!window.browser && window.chrome) {
+    window.browser = window.chrome;
   }
 
   const cppDlUrl = browser.runtime.getURL('src/cpp-dl.js');
